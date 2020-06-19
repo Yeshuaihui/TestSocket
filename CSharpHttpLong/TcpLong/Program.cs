@@ -56,29 +56,6 @@ namespace TcpLong
                     isBreak = true;
                 }
             }
-
-            //string welcom = "welcom to my test server";
-            //data = Encoding.ASCII.GetBytes(welcom);
-
-            ////发出欢迎信息
-            //client.Send(data, data.Length, SocketFlags.None);
-
-            ////循环等待来自客户端的信息
-            //while (true)
-            //{
-            //    //Recive在使用buffer的同时，重新设置了buffer的大小，因此重新设置为原大小
-            //    data = new byte[1024];
-            //    recv = client.Receive(data);//同步方法
-            //    if (recv == 0)
-            //    {
-            //        break;//客户端退出则服务器端退出                 
-            //    }
-            //    Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
-            //    client.Send(data, recv, SocketFlags.None);//发出应答信息               
-            //}
-
-            //Console.WriteLine("disconnected from {0}", clientep.Address);
-            //client.Close();//关闭客户机套接字
             CloseSocket();
             newsock.Close();//不需要其它的连接关闭原始的套接字
         }
